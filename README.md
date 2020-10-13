@@ -3,10 +3,10 @@
 ## API
 
 Criar uma api
-- [] Iniciar o projeto `npm init -y ou yarn init -y`
-- [] Instalar as dependências `npm i express nodemon cors axios`
-- [] Criar uma rota para acessar a API
-- [] Servir a API
+- [X] Iniciar o projeto `npm init -y ou yarn init -y`
+- [X] Instalar as dependências `npm i express nodemon cors axios`
+- [X] Criar uma rota para acessar a API
+- [X] Servir a API
 - [] Habilitar o CORS
 - [] Habilitar o nodemon para reiniciar o server
 
