@@ -1,5 +1,8 @@
 # Consumir API
 
+node server.js
+npx  lite-server
+
 ## API
 
 Criar uma api
@@ -13,8 +16,8 @@ Criar uma api
 ## frontend
 Consumir API
 
-- [] Utilizar fetch para consumir nossa API backend
-- [] Explicar Promise - Async/await
+- [X] Utilizar fetch para consumir nossa API backend
+- [X] Explicar Promise - Async/await
 - [] Usar try/catch
 - [] Mostrar a resposta na tela
 
