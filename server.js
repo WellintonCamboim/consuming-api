@@ -1,12 +1,28 @@
+const cors = require('cors');
 const express = require('express');
-const { json } = require('express');
 const app = express();
+const axios = require('axios')
 
-app.get('/', (req, res) => {
-    return res.json([
-        { name: 'Bruno' },
-        { name: 'Fernanda' },
-    ])
+app.use(cors())
+
+app.get('/', async (req, res) => {
+
+    try {
+
+        // const response = await axios('https://jsonplaceholder.typicode.com/users')
+        // response é a resposta do axios MAS eu tiro o data de dentro do response
+        const { data } = await axios('https://jsonplaceholder.typicode.com/users')
+        console.log(data)
+
+        // return res.json([
+        //     { name: 'Bruno' },
+        //     { name: 'Fernanda' },
+        // ])
+
+        return res.json(data)
+    } catch (error) {
+        console.error(error)
+    }
 })
 
 app.listen('4567')

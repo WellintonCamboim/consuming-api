@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <main></main>
+    <h1></h1>
 
 </body>
 <script>
@@ -15,12 +17,28 @@
     async function getContent() {
         try {
             const response = await fetch('http://localhost:4567/')
+            //console.log(response)
+            const data = await response.json()
+            //console.log(data)
+            show(data)
+
         } catch (error) {
             console.error(error)
         }
     }
 
     getContent()
+
+    //Função para rendenrizar os dados no view
+    function show(users) {
+        let output = ''
+
+        for (let user of users) {
+            output += `<li>${user.name}</li>`
+        }
+        document.querySelector('h1').innerHTML = output
+
+    }
 
 </script>
 
